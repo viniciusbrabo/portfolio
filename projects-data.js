@@ -4,6 +4,7 @@
  * Para adicionar um novo projeto:
  * Basta adicionar um novo objeto nesta lista com a data no formato "YYYY-MM" ou "YYYY-MM-DD".
  * A Home pegará automaticamente os 4 mais recentes ordenados pela data.
+ * categoryType usado nos filtros de projetos.html: branding, campanha, evento, concept.
  */
 const PROJECTS_DATA = [
   {
@@ -53,6 +54,79 @@ const PROJECTS_DATA = [
     image: "assets/wix/d2a74a_e8a76a4d55c14626a9e7791f7fb1776e.jpg",
     alt: "Concept art Sword Girl",
     wide: true
+  }
+,
+  {
+    id: "eternit",
+    title: "Eternit",
+    category: "IDENTIDADE VISUAL · BEE CREATIVE",
+    categoryType: "branding",
+    date: "2026-10-30",
+    dateDisplay: "2026",
+    url: "projeto-eternit.html",
+    image: "assets/bee/eternit/hero.jpg",
+    alt: "Fachada da fábrica da Eternit",
+    wide: true
+  },
+  {
+    id: "fisa-concepta",
+    title: "FiSA 2026 · Concepta Ingredients",
+    category: "EVENTO · BEE CREATIVE",
+    categoryType: "evento",
+    date: "2026-09-22",
+    dateDisplay: "2026",
+    url: "projeto-fisa-concepta.html",
+    image: "assets/bee/fisa-concepta/hero.jpg",
+    alt: "Estande da Concepta Ingredients na FiSA 2026",
+    wide: false
+  },
+  {
+    id: "workshop-inconcepta",
+    title: "Workshop INCONCEPTA",
+    category: "NAMING & IDENTIDADE · BEE CREATIVE",
+    categoryType: "evento",
+    date: "2026-04-09",
+    dateDisplay: "2026",
+    url: "projeto-workshop-inconcepta.html",
+    image: "assets/bee/workshop-inconcepta/hero.jpg",
+    alt: "Identidade visual do workshop INCONCEPTA 2026",
+    wide: true
+  },
+  {
+    id: "nautilus-viva-a-vida",
+    title: "Nautilus · Viva a vida na piscina",
+    category: "CAMPANHA · BEE CREATIVE",
+    categoryType: "campanha",
+    date: "2025-06-06",
+    dateDisplay: "2025",
+    url: "projeto-nautilus-viva-a-vida.html",
+    image: "assets/bee/nautilus-viva-a-vida/hero.jpg",
+    alt: "Campanha Viva a vida na piscina, da Nautilus",
+    wide: false
+  },
+  {
+    id: "nautilus-social-media",
+    title: "Nautilus · Social Media",
+    category: "SOCIAL MEDIA · BEE CREATIVE",
+    categoryType: "campanha",
+    date: "2024-10-24",
+    dateDisplay: "2024",
+    url: "projeto-nautilus-social-media.html",
+    image: "assets/bee/nautilus-social-media/hero.jpg",
+    alt: "Publicação \"4 motivos para automatizar o tratamento com cloro\" da Nautilus",
+    wide: true
+  },
+  {
+    id: "neria",
+    title: "Neria",
+    category: "BRANDING · BEE CREATIVE",
+    categoryType: "branding",
+    date: "2024-06-07",
+    dateDisplay: "2024",
+    url: "projeto-neria.html",
+    image: "assets/bee/neria/hero.jpg",
+    alt: "Neria: marca de energia do Grupo Capitale",
+    wide: false
   }
 ];
 
