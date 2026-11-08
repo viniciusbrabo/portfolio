@@ -1,6 +1,6 @@
 /**
- * Catálogo Central de Projetos do Portfólio
- * 
+ * Catálogo Central de Projetos do Portfólio (PT-BR / EN)
+ *
  * Para adicionar um novo projeto:
  * Basta adicionar um novo objeto nesta lista com a data no formato "YYYY-MM" ou "YYYY-MM-DD".
  * A Home pegará automaticamente os 4 mais recentes ordenados pela data.
@@ -8,125 +8,154 @@
  */
 const PROJECTS_DATA = [
   {
-    id: "ayme-design",
-    title: "Aymê Design",
-    category: "IDENTIDADE VISUAL",
-    categoryType: "branding",
-    date: "2025-07-01",
-    dateDisplay: "2025",
-    url: "projeto-ayme.html",
-    image: "assets/wix/d2a74a_794bdeaed2734d61a64a428ba99771d8.jpg",
-    alt: "Identidade visual Aymê Design",
-    wide: true
-  },
-  {
-    id: "joao-jorge",
-    title: "João Jorge Fisioterapia",
-    category: "IDENTIDADE VISUAL",
-    categoryType: "branding",
-    date: "2024-08-01",
-    dateDisplay: "2024",
-    url: "projeto-joao-jorge.html",
-    image: "assets/wix/d2a74a_74e0e0756cde41d78d25da20e3c15c32.jpg",
-    alt: "Identidade visual João Jorge Fisioterapia",
-    wide: false
-  },
-  {
-    id: "feiticeira",
-    title: "Feiticeira",
-    category: "PROJETO AUTORAL · CONCEPT ART",
-    categoryType: "concept",
-    date: "2024-03-15",
-    dateDisplay: "2024",
-    url: "projeto-feiticeira.html",
-    image: "assets/wix/d2a74a_e42507411746493ab1eb60a8a63dfcfb.jpg",
-    alt: "Concept art Feiticeira",
-    wide: false
-  },
-  {
-    id: "sword-girl",
-    title: "Sword Girl",
-    category: "PROJETO AUTORAL · CONCEPT ART",
-    categoryType: "concept",
-    date: "2024-01-20",
-    dateDisplay: "2024",
-    url: "projeto-sword-girl.html",
-    image: "assets/wix/d2a74a_e8a76a4d55c14626a9e7791f7fb1776e.jpg",
-    alt: "Concept art Sword Girl",
-    wide: true
-  }
-,
-  {
     id: "eternit",
     title: "Eternit",
+    titleEn: "Eternit",
     category: "IDENTIDADE VISUAL · BEE CREATIVE",
+    categoryEn: "VISUAL IDENTITY · BEE CREATIVE",
     categoryType: "branding",
     date: "2026-10-30",
     dateDisplay: "2026",
     url: "projeto-eternit.html",
     image: "assets/bee/eternit/hero.jpg",
     alt: "Fachada da fábrica da Eternit",
+    altEn: "Eternit factory facade with new visual identity",
     wide: true
   },
   {
     id: "fisa-concepta",
     title: "FiSA 2026 · Concepta Ingredients",
+    titleEn: "FiSA 2026 · Concepta Ingredients",
     category: "EVENTO · BEE CREATIVE",
+    categoryEn: "EVENT & BOOTH · BEE CREATIVE",
     categoryType: "evento",
     date: "2026-09-22",
     dateDisplay: "2026",
     url: "projeto-fisa-concepta.html",
     image: "assets/bee/fisa-concepta/hero.jpg",
     alt: "Estande da Concepta Ingredients na FiSA 2026",
+    altEn: "Concepta Ingredients booth at FiSA 2026",
     wide: false
   },
   {
     id: "workshop-inconcepta",
     title: "Workshop INCONCEPTA",
+    titleEn: "INCONCEPTA Workshop",
     category: "NAMING & IDENTIDADE · BEE CREATIVE",
+    categoryEn: "NAMING & IDENTITY · BEE CREATIVE",
     categoryType: "evento",
     date: "2026-04-09",
     dateDisplay: "2026",
     url: "projeto-workshop-inconcepta.html",
     image: "assets/bee/workshop-inconcepta/hero.jpg",
     alt: "Identidade visual do workshop INCONCEPTA 2026",
+    altEn: "Visual identity for the INCONCEPTA 2026 workshop",
+    wide: true
+  },
+  {
+    id: "ayme-design",
+    title: "Aymê Design",
+    titleEn: "Aymê Design",
+    category: "IDENTIDADE VISUAL",
+    categoryEn: "VISUAL IDENTITY",
+    categoryType: "branding",
+    date: "2025-07-01",
+    dateDisplay: "2025",
+    url: "projeto-ayme.html",
+    image: "assets/wix/d2a74a_794bdeaed2734d61a64a428ba99771d8.jpg",
+    alt: "Identidade visual Aymê Design",
+    altEn: "Aymê Design visual identity",
     wide: true
   },
   {
     id: "nautilus-viva-a-vida",
     title: "Nautilus · Viva a vida na piscina",
+    titleEn: "Nautilus · Live Life by the Pool",
     category: "CAMPANHA · BEE CREATIVE",
+    categoryEn: "CAMPAIGN · BEE CREATIVE",
     categoryType: "campanha",
     date: "2025-06-06",
     dateDisplay: "2025",
     url: "projeto-nautilus-viva-a-vida.html",
     image: "assets/bee/nautilus-viva-a-vida/hero.jpg",
     alt: "Campanha Viva a vida na piscina, da Nautilus",
+    altEn: "Nautilus 'Live Life by the Pool' brand campaign",
     wide: false
   },
   {
     id: "nautilus-social-media",
     title: "Nautilus · Social Media",
+    titleEn: "Nautilus · Social Media",
     category: "SOCIAL MEDIA · BEE CREATIVE",
+    categoryEn: "SOCIAL MEDIA · BEE CREATIVE",
     categoryType: "campanha",
     date: "2024-10-24",
     dateDisplay: "2024",
     url: "projeto-nautilus-social-media.html",
     image: "assets/bee/nautilus-social-media/hero.jpg",
     alt: "Publicação \"4 motivos para automatizar o tratamento com cloro\" da Nautilus",
+    altEn: "Nautilus social media post on automated chlorine treatment",
     wide: true
+  },
+  {
+    id: "joao-jorge",
+    title: "João Jorge Fisioterapia",
+    titleEn: "João Jorge Physical Therapy",
+    category: "IDENTIDADE VISUAL",
+    categoryEn: "VISUAL IDENTITY",
+    categoryType: "branding",
+    date: "2024-08-01",
+    dateDisplay: "2024",
+    url: "projeto-joao-jorge.html",
+    image: "assets/wix/d2a74a_74e0e0756cde41d78d25da20e3c15c32.jpg",
+    alt: "Identidade visual João Jorge Fisioterapia",
+    altEn: "João Jorge Physical Therapy visual identity",
+    wide: false
   },
   {
     id: "neria",
     title: "Neria",
+    titleEn: "Neria",
     category: "BRANDING · BEE CREATIVE",
+    categoryEn: "BRANDING · BEE CREATIVE",
     categoryType: "branding",
     date: "2024-06-07",
     dateDisplay: "2024",
     url: "projeto-neria.html",
     image: "assets/bee/neria/hero.jpg",
     alt: "Neria: marca de energia do Grupo Capitale",
+    altEn: "Neria: Grupo Capitale energy brand",
     wide: false
+  },
+  {
+    id: "feiticeira",
+    title: "Feiticeira",
+    titleEn: "Sorceress (Feiticeira)",
+    category: "PROJETO AUTORAL · CONCEPT ART",
+    categoryEn: "INDEPENDENT PROJECT · CONCEPT ART",
+    categoryType: "concept",
+    date: "2024-03-15",
+    dateDisplay: "2024",
+    url: "projeto-feiticeira.html",
+    image: "assets/wix/d2a74a_e42507411746493ab1eb60a8a63dfcfb.jpg",
+    alt: "Concept art Feiticeira",
+    altEn: "Sorceress concept art and digital compositing",
+    wide: false
+  },
+  {
+    id: "sword-girl",
+    title: "Sword Girl",
+    titleEn: "Sword Girl",
+    category: "PROJETO AUTORAL · CONCEPT ART",
+    categoryEn: "INDEPENDENT PROJECT · CONCEPT ART",
+    categoryType: "concept",
+    date: "2024-01-20",
+    dateDisplay: "2024",
+    url: "projeto-sword-girl.html",
+    image: "assets/wix/d2a74a_e8a76a4d55c14626a9e7791f7fb1776e.jpg",
+    alt: "Concept art Sword Girl",
+    altEn: "Sword Girl cyberpunk concept art",
+    wide: true
   }
 ];
 

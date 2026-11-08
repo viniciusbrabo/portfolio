@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV — Vinicius Augusto Alves Brabo (PT-BR)</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --ink: #101111;
+        --cream: #f2f2ef;
+        --paper: #fafaf7;
+        --gray: #e2e2dd;
+        --muted: rgba(16, 17, 17, 0.62);
+        --line: rgba(16, 17, 17, 0.16);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+      html, body {
+        background: #222324;
+        color: var(--ink);
+        font-family: "Manrope", Arial, sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .screen-bar {
+        max-width: 210mm;
+        margin: 18px auto 12px;
+        padding: 10px 16px;
+        background: var(--ink);
+        color: var(--cream);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 500 11px "DM Mono", monospace;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border: 1px solid rgba(242, 242, 239, 0.18);
+      }
+      .screen-bar-actions {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .screen-btn {
+        padding: 7px 13px;
+        border: 1px solid rgba(242, 242, 239, 0.45);
+        color: var(--cream);
+        background: transparent;
+        font: 500 11px "DM Mono", monospace;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .screen-btn-primary {
+        background: var(--cream);
+        color: var(--ink);
+        border-color: var(--cream);
+      }
+      .page {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto 28px;
+        background: var(--paper);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+      }
+      /* Header Dark Editorial */
+      .cv-header {
+        background: var(--ink);
+        color: var(--cream);
+        padding: 9.5mm 13mm 7mm;
+      }
+      .cv-header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .cv-eyebrow {
+        font: 500 8.5pt "DM Mono", monospace;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: rgba(242, 242, 239, 0.68);
+        margin-bottom: 4px;
+      }
+      .cv-name {
+        font-size: 24pt;
+        font-weight: 800;
+        letter-spacing: -0.055em;
+        line-height: 0.98;
+        color: var(--cream);
+      }
+      .cv-award {
+        display: inline-block;
+        margin-top: 7px;
+        padding: 3.5px 9px;
+        border: 1px solid rgba(242, 242, 239, 0.35);
+        border-radius: 20px;
+        font: 500 7.5pt "DM Mono", monospace;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--cream);
+        background: rgba(242, 242, 239, 0.07);
+      }
+      .cv-logo {
+        width: 78px;
+        height: auto;
+        opacity: 0.95;
+        margin-top: 2px;
+      }
+      .cv-contacts {
+        margin-top: 7mm;
+        padding-top: 3.5mm;
+        border-top: 1px solid rgba(242, 242, 239, 0.18);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px 14px;
+        font: 400 8pt "DM Mono", monospace;
+        letter-spacing: 0.02em;
+        color: rgba(242, 242, 239, 0.88);
+      }
+      .cv-contacts a {
+        border-bottom: 1px solid rgba(242, 242, 239, 0.32);
+        padding-bottom: 1px;
+      }
+      .cv-contacts .portfolio-pill {
+        font-weight: 500;
+        color: var(--ink);
+        background: var(--cream);
+        padding: 2px 7px;
+        border-bottom: none;
+      }
+
+      /* Main Content */
+      .cv-body {
+        padding: 5.5mm 13mm 4mm;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .cv-section {
+        display: grid;
+        grid-template-columns: 36mm 1fr;
+        gap: 6mm;
+        padding: 3.8mm 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .cv-section:first-child {
+        padding-top: 1mm;
+      }
+      .cv-section:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .cv-label {
+        font: 500 7.8pt/1.35 "DM Mono", monospace;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding-top: 1.5px;
+      }
+      .cv-profile-text {
+        font-size: 9.4pt;
+        line-height: 1.48;
+        color: var(--ink);
+        font-weight: 500;
+      }
+
+      /* Skills Grid */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5mm 5mm;
+      }
+      .skill-box h3 {
+        font: 500 7.5pt "DM Mono", monospace;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 2px;
+      }
+      .skill-box p {
+        font-size: 8.6pt;
+        line-height: 1.4;
+        color: var(--ink);
+      }
+      .toolbelt {
+        margin-top: 3mm;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .toolbelt span {
+        border: 1px solid rgba(16, 17, 17, 0.28);
+        padding: 2px 7px;
+        border-radius: 20px;
+        font: 500 7pt "DM Mono", monospace;
+        letter-spacing: 0.03em;
+      }
+
+      /* Experience */
+      .exp-list {
+        display: flex;
+        flex-direction: column;
+        gap: 3.4mm;
+      }
+      .exp-item-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8px;
+      }
+      .exp-role {
+        font-size: 9.8pt;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .exp-org {
+        font-weight: 600;
+        color: rgba(16, 17, 17, 0.78);
+      }
+      .exp-meta {
+        font: 500 7.5pt "DM Mono", monospace;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+      .exp-bullets {
+        margin-top: 1.4mm;
+        padding-left: 13px;
+        font-size: 8.55pt;
+        line-height: 1.41;
+        color: rgba(16, 17, 17, 0.9);
+      }
+      .exp-bullets li {
+        margin-bottom: 1.1mm;
+      }
+      .exp-bullets li:last-child {
+        margin-bottom: 0;
+      }
+      .exp-compact-desc {
+        margin-top: 0.8mm;
+        font-size: 8.4pt;
+        line-height: 1.38;
+        color: rgba(16, 17, 17, 0.85);
+      }
+      .metric-inline {
+        display: inline-block;
+        background: var(--ink);
+        color: var(--cream);
+        padding: 0 5px;
+        font: 500 7.6pt "DM Mono", monospace;
+      }
+
+      /* Education & Credentials */
+      .edu-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3mm 6mm;
+      }
+      .edu-item h3 {
+        font-size: 9pt;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      .edu-item p {
+        font-size: 8.4pt;
+        line-height: 1.38;
+        color: rgba(16, 17, 17, 0.82);
+      }
+      .edu-date {
+        font: 500 7.4pt "DM Mono", monospace;
+        color: var(--muted);
+      }
+      .cert-line {
+        margin-top: 2.5mm;
+        padding-top: 2mm;
+        border-top: 1px dashed var(--line);
+        font-size: 8.1pt;
+        line-height: 1.38;
+        color: rgba(16, 17, 17, 0.82);
+      }
+      .cert-line strong {
+        font: 500 7.4pt "DM Mono", monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--muted);
+        margin-right: 4px;
+      }
+
+      /* Footer */
+      .cv-footer {
+        background: var(--ink);
+        color: var(--cream);
+        padding: 2.8mm 13mm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: 500 7.2pt "DM Mono", monospace;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .cv-footer a {
+        color: var(--cream);
+        border-bottom: 1px solid rgba(242, 242, 239, 0.4);
+      }
+
+      @media print {
+        html, body {
+          background: var(--paper);
+        }
+        .screen-bar {
+          display: none !important;
+        }
+        .page {
+          margin: 0;
+          box-shadow: none;
+          width: 210mm;
+          height: 297mm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="screen-bar">
+      <a href="index.html#sobre">← Voltar ao portfólio</a>
+      <div class="screen-bar-actions">
+        <a class="screen-btn" href="cv-vinicius-brabo-en.html">English Version ↗</a>
+        <a class="screen-btn" href="assets/cv/cv-vinicius-brabo-pt.pdf" download>Baixar PDF ↓</a>
+        <button class="screen-btn screen-btn-primary" onclick="window.print()">Imprimir / Salvar PDF</button>
+      </div>
+    </div>
+
+    <main class="page">
+      <header class="cv-header">
+        <div class="cv-header-top">
+          <div>
+            <p class="cv-eyebrow">Diretor de Arte Pleno · IA Aplicada · Sumaré, SP — Brasil</p>
+            <h1 class="cv-name">Vinicius Augusto Alves Brabo</h1>
+            <a class="cv-award" href="https://premiorecall.com" target="_blank" rel="noopener noreferrer">
+              ★ Ganhador do Prêmio Recall por 3 anos consecutivos (2024 · 2025 · 2026)
+            </a>
+          </div>
+          <img class="cv-logo" src="assets/brand/logo-white.svg" alt="Vinicius Brabo" />
+        </div>
+        <div class="cv-contacts">
+          <a class="portfolio-pill" href="https://likapom.github.io/portfolio/#inicio" target="_blank" rel="noopener noreferrer">
+            PORTFÓLIO: likapom.github.io/portfolio ↗
+          </a>
+          <a href="https://web.whatsapp.com/send?phone=5519997240129" target="_blank" rel="noopener noreferrer">+55 19 99724-0129</a>
+          <a href="mailto:valves299@gmail.com">valves299@gmail.com</a>
+          <a href="https://www.linkedin.com/in/viniciusalvesbrabo" target="_blank" rel="noopener noreferrer">linkedin.com/in/viniciusalvesbrabo</a>
+        </div>
+      </header>
+
+      <div class="cv-body">
+        <!-- 01 / PERFIL -->
+        <section class="cv-section">
+          <div class="cv-label">01 / Perfil</div>
+          <div>
+            <p class="cv-profile-text">
+              Diretor de Arte Pleno com 8 anos de experiência em design e 5 anos em agência, especializado em conceitos de campanhas, key visuals, identidades visuais, logotipos e embalagens. Na Agência Bee Creative, assina a direção de arte de projetos premiados por três anos consecutivos no Prêmio Recall (2024, 2025 e 2026) e lidera a iniciativa interna de IA e automação de processos. Busca oportunidades remotas ou híbridas em direção de arte, design e automação aplicada.
+            </p>
+          </div>
+        </section>
+
+        <!-- 02 / COMPETÊNCIAS -->
+        <section class="cv-section">
+          <div class="cv-label">02 / Competências</div>
+          <div>
+            <div class="skills-grid">
+              <div class="skill-box">
+                <h3>Criação &amp; Marca</h3>
+                <p>Direção de arte, conceitos de campanha, key visuals, naming, identidade visual, logotipos e concept art.</p>
+              </div>
+              <div class="skill-box">
+                <h3>Embalagens &amp; Produção</h3>
+                <p>Desenvolvimento técnico e visual de embalagens com domínio das normas aplicáveis da ANVISA.</p>
+              </div>
+              <div class="skill-box">
+                <h3>IA &amp; Automação</h3>
+                <p>Fluxos em n8n, SQL, PostgreSQL, integração de WhatsApp via WA-AKG, Codex, Claude Code e servidor Linux próprio.</p>
+              </div>
+              <div class="skill-box">
+                <h3>Idiomas</h3>
+                <p>Português fluente (nativo) · Inglês avançado · Japonês básico.</p>
+              </div>
+            </div>
+            <div class="toolbelt">
+              <span>Adobe Creative Cloud</span><span>Figma</span><span>n8n</span><span>PostgreSQL</span><span>SQL</span><span>Linux</span><span>WA-AKG</span><span>Codex</span><span>Claude Code</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03 / EXPERIÊNCIA PROFISSIONAL -->
+        <section class="cv-section">
+          <div class="cv-label">03 / Experiência<br />Profissional</div>
+          <div class="exp-list">
+            <article>
+              <div class="exp-item-head">
+                <div class="exp-role">Diretor de Arte Pleno · <span class="exp-org">Agência Bee Creative</span></div>
+                <span class="exp-meta">Campinas, SP · Ago 2023 – atual</span>
+              </div>
+              <ul class="exp-bullets">
+                <li>Cria conceitos de campanhas, key visuals, identidades visuais e logotipos para marcas como <strong>Eternit</strong>, <strong>Concepta Ingredients</strong> (FiSA 2026 e Workshop INCONCEPTA), <strong>Nautilus</strong> e <strong>Neria</strong> (Grupo Capitale).</li>
+                <li>Ganhador do <strong>Prêmio Recall por 3 anos consecutivos (2024, 2025 e 2026)</strong> em projetos de branding e campanhas da agência.</li>
+                <li>Atua como especialista em embalagens na agência, aplicando conhecimento técnico sobre normas pertinentes da ANVISA.</li>
+                <li>Lidera projeto interno de IA e automação de processos, integrando fluxos com n8n, PostgreSQL e WhatsApp em servidor Linux montado do zero.</li>
+                <li>Automatizou análise de redes sociais para prospecção: reduziu o tempo de execução humana de <span class="metric-inline">4h → 20min</span>, incluindo validação.</li>
+                <li>Consolidou demandas de atendimento de e-mail, WhatsApp e Runrun.it em relatório único, ampliando a visibilidade da equipe sobre os canais.</li>
+              </ul>
+            </article>
+
+            <article>
+              <div class="exp-item-head">
+                <div class="exp-role">Assistente Sênior em Direção de Arte · <span class="exp-org">Agência Bee Creative</span></div>
+                <span class="exp-meta">Campinas, SP · Ago 2021 – Ago 2023</span>
+              </div>
+            </article>
+
+            <article>
+              <div class="exp-item-head">
+                <div class="exp-role">Designer autônomo · <span class="exp-org">Atuação independente</span></div>
+                <span class="exp-meta">Sumaré, SP · Ago 2018 – atual</span>
+              </div>
+              <p class="exp-compact-desc">Desenvolvimento de identidades visuais, sistemas de marca e projetos autorais de ilustração e concept art (como <em>Aymê Design</em> e <em>João Jorge Fisioterapia</em>).</p>
+            </article>
+
+            <article>
+              <div class="exp-item-head">
+                <div class="exp-role">Assistente de Marketing Jr · <span class="exp-org">Marry Perry Paris</span></div>
+                <span class="exp-meta">Brasil · Jul 2020 – Jul 2021</span>
+              </div>
+              <p class="exp-compact-desc">Criação e edição de vídeos e imagens para redes sociais; apoio na contratação de terceiros, gestão de anúncios no Facebook Ads e layouts para a área de T.I.</p>
+            </article>
+
+            <article>
+              <div class="exp-item-head">
+                <div class="exp-role">Início de carreira · <span class="exp-org">Design Gráfico, Produção &amp; Publicidade</span></div>
+                <span class="exp-meta">Região de Campinas, SP · Ago 2019 – Jul 2020</span>
+              </div>
+              <p class="exp-compact-desc"><strong>POGs Publicidade</strong> (Estagiário de Design Gráfico, Abr–Jul 2020) · <strong>STL Digital Gráfica</strong> (Auxiliar de Produção, Nov 2019–Jan 2020) · <strong>Multty Comercial</strong> (Estagiário de Marketing e Publicidade, Ago–Out 2019).</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- 04 / FORMAÇÃO -->
+        <section class="cv-section">
+          <div class="cv-label">04 / Formação &amp;<br />Certificações</div>
+          <div>
+            <div class="edu-grid">
+              <div class="edu-item">
+                <h3>Bacharelado em Publicidade e Propaganda</h3>
+                <p>Anhanguera Educacional · <span class="edu-date">2018 – 2022</span></p>
+              </div>
+              <div class="edu-item">
+                <h3>Técnico em Informática</h3>
+                <p>ETEC · <span class="edu-date">2013 – 2015</span></p>
+              </div>
+            </div>
+            <p class="cert-line">
+              <strong>Certificações:</strong> Princípios de conceitualização e branding · Composição e retoque com Photoshop · Facebook Ads · Gestão de pessoas · A liderança na gestão de equipes.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <footer class="cv-footer">
+        <span>Vinicius Augusto Alves Brabo</span>
+        <a href="https://likapom.github.io/portfolio/#inicio" target="_blank" rel="noopener noreferrer">likapom.github.io/portfolio/#inicio</a>
+        <span>2026</span>
+      </footer>
+    </main>
+  </body>
+</html>
