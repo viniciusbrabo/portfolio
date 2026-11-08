@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO: Preencha com o título do projeto e descrição -->
+    <meta name="description" content="[NOME DO PROJETO] — [BREVE RESUMO DO PROJETO] por Vinicius Brabo." />
+    <meta property="og:title" content="[NOME DO PROJETO] — [CATEGORIA] · Vinicius Brabo" />
+    <meta property="og:description" content="[BREVE RESUMO DO PROJETO]" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://viniciusbrabo.github.io/projeto-[SLUG].html" />
+    <meta property="og:image" content="https://viniciusbrabo.github.io/assets/wix/[IMAGEM_DE_CAPA].jpg" />
+    <title>[NOME DO PROJETO] — [CATEGORIA] · Vinicius Brabo</title>
+    
+    <!-- Tipografia e Estilos Globais -->
+        <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Link de Acessibilidade -->
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+    <!-- Topbar Padrão do Portfólio -->
+    <header class="topbar" role="banner">
+      <a class="brand" href="index.html#inicio" aria-label="Início"><img src="assets/brand/logo-white.svg" alt="Vinicius Brabo" /></a>
+      <nav aria-label="Navegação principal">
+        <a href="index.html#atuacao">Atuação</a>
+        <a href="index.html#automacao">Automação</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="index.html#sobre">Sobre</a>
+      </nav>
+      <a class="contact-link" href="https://www.linkedin.com/in/viniciusalvesbrabo" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+    </header>
+
+    <main id="conteudo" class="project-page">
+      <!-- ===================================================================
+           1. CABEÇALHO DO PROJETO & FICHA TÉCNICA
+           =================================================================== -->
+      <section class="project-intro">
+        <div class="project-nav-back">
+          <a href="projetos.html" class="back-link">← Voltar aos projetos</a>
+          <span class="project-category-tag">[NÚMERO / CATEGORIA DO PROJETO]</span>
+        </div>
+        <div class="project-title-block">
+          <h1 class="project-main-title">[Título do Projeto]</h1>
+          <p class="project-tagline">[Frase de impacto ou subtítulo descritivo do projeto]</p>
+        </div>
+        <!-- Metadados do Projeto -->
+        <dl class="project-meta-grid">
+          <div class="project-meta-item">
+            <dt>TIPO DE PROJETO</dt>
+            <dd>[Branding / Concept Art / Embalagem / etc.]</dd>
+          </div>
+          <div class="project-meta-item">
+            <dt>DATA</dt>
+            <dd>[Mês e Ano, ex: Agosto de 2025]</dd>
+          </div>
+          <div class="project-meta-item">
+            <dt>LOCAL</dt>
+            <dd>[Cidade - Estado, ex: Sumaré · SP]</dd>
+          </div>
+          <div class="project-meta-item">
+            <dt>DIREÇÃO DE ARTE</dt>
+            <dd>Vinicius Augusto Alves Brabo</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- ===================================================================
+           2. IMAGEM HERO DE DESTAQUE (MOLDURA COM RESPIRO)
+           =================================================================== -->
+      <section class="project-hero-media">
+        <figure class="media-frame media-frame-hero">
+          <img src="assets/wix/[IMAGEM_PRINCIPAL].jpg" alt="[Descrição da imagem principal]" />
+        </figure>
+      </section>
+
+      <!-- ===================================================================
+           3. SEÇÃO NARRATIVA 01 (LAYOUT SPLIT)
+           =================================================================== -->
+      <section class="project-narrative-split">
+        <div class="narrative-label">
+          <p class="section-label">01 / [TÓPICO OU CONCEITO]</p>
+        </div>
+        <div class="narrative-body">
+          <h2 class="narrative-heading">[Subtítulo da Seção]</h2>
+          <p class="narrative-lead">[Parágrafo de destaque / abertura com tipografia maior]</p>
+          <p class="narrative-paragraph">[Texto explicativo detalhado sobre o conceito, processo ou solução]</p>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           4. IMAGEM DE LARGURA COMPLETA (MOCKUP OU APLICAÇÃO)
+           =================================================================== -->
+      <section class="project-full-media">
+        <figure class="media-frame">
+          <img src="assets/wix/[IMAGEM_INTERMEDIARIA].jpg" alt="[Descrição da aplicação]" loading="lazy" />
+        </figure>
+      </section>
+
+      <!-- ===================================================================
+           5. SEÇÃO NARRATIVA 02 (CARDS OU ETAPAS)
+           =================================================================== -->
+      <section class="project-narrative-split">
+        <div class="narrative-label">
+          <p class="section-label">02 / [DESENVOLVIMENTO OU PILARES]</p>
+        </div>
+        <div class="narrative-body">
+          <h2 class="narrative-heading">[Subtítulo explicativo]</h2>
+          <p class="narrative-paragraph">[Contexto geral sobre as etapas ou componentes da entrega]</p>
+
+          <!-- Opcional: Cards de Pilares / Etapas -->
+          <div class="releitura-cards">
+            <article class="releitura-card">
+              <span class="card-step">01</span>
+              <h3>[Pilar 1]</h3>
+              <p>[Descrição concisa do primeiro elemento/decisão técnica]</p>
+            </article>
+            <article class="releitura-card">
+              <span class="card-step">02</span>
+              <h3>[Pilar 2]</h3>
+              <p>[Descrição concisa do segundo elemento/decisão técnica]</p>
+            </article>
+            <article class="releitura-card">
+              <span class="card-step">03</span>
+              <h3>[Pilar 3]</h3>
+              <p>[Descrição concisa do terceiro elemento/decisão técnica]</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           6. GALERIA DE APLICAÇÕES (2 COLUNAS)
+           =================================================================== -->
+      <section class="project-gallery-grid">
+        <figure class="media-frame">
+          <img src="assets/wix/[IMAGEM_GALERIA_1].jpg" alt="[Descrição da imagem 1]" loading="lazy" />
+        </figure>
+        <figure class="media-frame">
+          <img src="assets/wix/[IMAGEM_GALERIA_2].jpg" alt="[Descrição da imagem 2]" loading="lazy" />
+        </figure>
+      </section>
+
+      <!-- ===================================================================
+           7. BANNER DE IMPACTO / CITAÇÃO DE FECHAMENTO
+           =================================================================== -->
+      <section class="project-statement-banner">
+        <div class="banner-inner">
+          <p class="section-label banner-label">03 / [CONCLUSÃO OU MANIFESTO]</p>
+          <blockquote class="banner-quote">
+            "[Citação de impacto ou frase síntese que define o projeto.]"
+          </blockquote>
+          <p class="banner-closing">[Parágrafo final de fechamento e posicionamento de marca]</p>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           8. NAVEGAÇÃO DE RODAPÉ DO PROJETO
+           =================================================================== -->
+      <section class="project-footer-nav">
+        <a href="projetos.html" class="project-nav-btn">
+          <span>←</span> Ver todos os projetos
+        </a>
+        <a href="https://www.linkedin.com/in/viniciusalvesbrabo" target="_blank" rel="noreferrer" class="button">
+          Vamos conversar <span>↗</span>
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer Padrão -->
+    <footer role="contentinfo">
+      <span>VINICIUS AUGUSTO ALVES BRABO</span>
+      <span>SUMARÉ · SP · BRASIL</span>
+      <span>2026</span>
+    </footer>
+
+    <!-- Botão Fixo de Contato (WhatsApp) -->
+    <a href="https://web.whatsapp.com/send?phone=5519997240129" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contato via WhatsApp">
+      <img src="assets/brand/whatsapp.png" alt="WhatsApp" />
+    </a>
+
+  </body>
+</html>

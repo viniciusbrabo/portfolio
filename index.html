@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfólio de Vinicius Augusto Alves Brabo — direção de arte, embalagens, IA aplicada e automação." />
-    <title>Vinicius Brabo — Direção de Arte & IA aplicada</title>
+    <meta property="og:title" content="Vinicius Brabo – Portfólio" />
+    <meta property="og:description" content="Direção de arte, IA aplicada e automação – portfolio de Vinicius Brabo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://viniciusbrabo.github.io/" />
+    <meta property="og:image" content="https://viniciusbrabo.github.io/assets/brand/logo-white.svg" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+  <a href="#inicio" class="skip-link">Pular para o conteúdo</a>
     <header class="topbar">
       <a class="brand" href="#inicio" aria-label="Início"><img src="assets/brand/logo-white.svg" alt="Vinicius Brabo" /></a>
       <nav aria-label="Navegação principal">
         <a href="#atuacao">Atuação</a>
         <a href="#automacao">Automação</a>
+        <a href="projetos.html">Projetos</a>
         <a href="#sobre">Sobre</a>
       </nav>
       <a class="contact-link" href="https://www.linkedin.com/in/viniciusalvesbrabo" target="_blank" rel="noreferrer">LinkedIn ↗</a>
@@ -80,16 +88,21 @@
       </section>
 
       <section class="projects" id="projetos">
-        <p class="section-label">03 / PROJETOS SELECIONADOS</p>
+        <p class="section-label">03 / PROJETOS RECENTES</p>
         <div class="project-heading">
           <h2>Marca, universo visual e expressão autoral.</h2>
-          <p>Uma seleção inicial de projetos de identidade visual e concept art. Os cases completos entram em seguida, com contexto, processo e aplicações.</p>
+          <p>Destaques mais recentes em identidade visual e direção de arte. Acesse o arquivo completo para ver todos os cases.</p>
         </div>
         <div class="project-grid">
-          <article class="project-card project-card-wide"><img src="assets/wix/d2a74a_794bdeaed2734d61a64a428ba99771d8.jpg" alt="Identidade visual Aymê Design" loading="lazy" /><div><span>IDENTIDADE VISUAL</span><h3>Aymê Design</h3></div></article>
-          <article class="project-card"><img src="assets/wix/d2a74a_74e0e0756cde41d78d25da20e3c15c32.jpg" alt="Identidade visual João Jorge Fisioterapia" loading="lazy" /><div><span>IDENTIDADE VISUAL</span><h3>João Jorge Fisioterapia</h3></div></article>
-          <article class="project-card"><img src="assets/wix/d2a74a_e42507411746493ab1eb60a8a63dfcfb.jpg" alt="Concept art Feiticeira" loading="lazy" /><div><span>PROJETO AUTORAL</span><h3>Feiticeira</h3></div></article>
-          <article class="project-card project-card-wide"><img src="assets/wix/d2a74a_e8a76a4d55c14626a9e7791f7fb1776e.jpg" alt="Concept art Sword Girl" loading="lazy" /><div><span>PROJETO AUTORAL</span><h3>Sword Girl</h3></div></article>
+          <a href="projeto-ayme.html" class="project-card project-card-wide" aria-label="Ver projeto Aymê Design"><img src="assets/wix/d2a74a_794bdeaed2734d61a64a428ba99771d8.jpg" alt="Identidade visual Aymê Design" loading="lazy" /><div><span>IDENTIDADE VISUAL · 2025 ↗</span><h3>Aymê Design</h3></div></a>
+          <a href="projeto-joao-jorge.html" class="project-card" aria-label="Ver projeto João Jorge Fisioterapia"><img src="assets/wix/d2a74a_74e0e0756cde41d78d25da20e3c15c32.jpg" alt="Identidade visual João Jorge Fisioterapia" loading="lazy" /><div><span>IDENTIDADE VISUAL · 2024 ↗</span><h3>João Jorge Fisioterapia</h3></div></a>
+          <a href="projeto-feiticeira.html" class="project-card" aria-label="Ver projeto Feiticeira"><img src="assets/wix/d2a74a_e42507411746493ab1eb60a8a63dfcfb.jpg" alt="Concept art Feiticeira" loading="lazy" /><div><span>PROJETO AUTORAL · CONCEPT ART ↗</span><h3>Feiticeira</h3></div></a>
+          <a href="projeto-sword-girl.html" class="project-card project-card-wide" aria-label="Ver projeto Sword Girl"><img src="assets/wix/d2a74a_e8a76a4d55c14626a9e7791f7fb1776e.jpg" alt="Concept art Sword Girl" loading="lazy" /><div><span>PROJETO AUTORAL · CONCEPT ART ↗</span><h3>Sword Girl</h3></div></a>
+        </div>
+        <div class="projects-cta-wrap">
+          <a href="projetos.html" class="projects-cta-btn">
+            Ver todos os projetos <span>↗</span>
+          </a>
         </div>
       </section>
 
@@ -106,7 +119,33 @@
     <footer>
       <span>VINICIUS AUGUSTO ALVES BRABO</span>
       <span>SUMARÉ · SP · BRASIL</span>
-      <span>2026</span>
     </footer>
+
+    <!-- Botão Fixo de Contato (WhatsApp) -->
+    <a href="https://web.whatsapp.com/send?phone=5519997240129" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contato via WhatsApp">
+      <img src="assets/brand/whatsapp.png" alt="WhatsApp" />
+    </a>
+
+    <!-- Automação de Projetos por Data -->
+    <script src="projects-data.js"></script>
+    <script>
+      (function() {
+        const grid = document.querySelector('.project-grid');
+        if (!grid || typeof getRecentProjects !== 'function') return;
+
+        const recents = getRecentProjects(4);
+        if (!recents || recents.length === 0) return;
+
+        grid.innerHTML = recents.map(proj => `
+          <a href="${proj.url}" class="project-card ${proj.wide ? 'project-card-wide' : ''}" data-date="${proj.date}" aria-label="Ver projeto ${proj.title}">
+            <img src="${proj.image}" alt="${proj.alt}" loading="lazy" />
+            <div>
+              <span>${proj.category} · ${proj.dateDisplay} ↗</span>
+              <h3>${proj.title}</h3>
+            </div>
+          </a>
+        `).join('');
+      })();
+    </script>
   </body>
 </html>
