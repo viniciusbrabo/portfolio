@@ -15,7 +15,7 @@ Todo novo projeto, case, seção institucional ou atualização de currículo ne
 - **Cargo atual:** `Diretor de Arte Pleno` (PT) / `Mid-Weight Art Director` (EN).
 - **Papel nos cases da Agência Bee Creative:** `Direção de Arte e Design` (PT) / `Art Direction & Design` (EN).
 - **Prêmio Recall:** Tricampeão consecutivo (`2024, 2025 e 2026`), com link para `https://premiorecall.com`.
-- **Links externos:** Não utilizar links do Behance; o portfólio oficial é `https://likapom.github.io/portfolio/#inicio`.
+- **Links externos:** Não utilizar links do Behance; o portfólio oficial é `https://viniciusbrabo.github.io/portfolio/#inicio`.
 
 ## 3. Sincronização com a Memória do Obsidian
 - Em caso de dúvidas ou após qualquer atualização relevante neste repositório, consulte e atualize a nota `C:\Users\LikaSensei\Documents\Codex\BlocosExplicados\memoria-codex\PORTFOLIO-VINICIUS.md` (além de `ESTADO.md` e `DECISOES.md` quando aplicável).

@@ -1,6 +1,6 @@
 # Portfólio de Vinicius Brabo
 
-Site estático bilíngue (**PT-BR** padrão + **EN**), publicado pelo GitHub Pages em https://likapom.github.io/portfolio/#inicio.
+Site estático bilíngue (**PT-BR** padrão + **EN**), publicado pelo GitHub Pages em https://viniciusbrabo.github.io/portfolio/#inicio.
 
 ## Regras de Manutenção (Importante para Agentes / IA)
 
