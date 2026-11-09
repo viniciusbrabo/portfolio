@@ -1,21 +1,31 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EHXZVHHYEP"></script>
+    <!-- Google Tag Manager & Google Analytics (G-EHXZVHHYEP / GTM-P93LBPSK) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-EHXZVHHYEP');
-    </script>
-    <!-- Google Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P93LBPSK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      (function() {
+        var loaded = false;
+        function loadGTM() {
+          if (loaded) return;
+          loaded = true;
+          window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-P93LBPSK';
+          document.head.appendChild(s);
+        }
+        var events = ['scroll', 'pointerdown', 'touchstart', 'keydown', 'mousemove'];
+        events.forEach(function(ev) {
+          window.addEventListener(ev, loadGTM, { once: true, passive: true });
+        });
+        window.addEventListener('load', function() {
+          setTimeout(loadGTM, 3500);
+        });
+      })();
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,8 +49,10 @@
     <link rel="apple-touch-icon" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=8" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
+    <link rel="stylesheet" href="styles.css?v=9" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -70,7 +82,7 @@
     <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
     <header class="topbar" role="banner">
-      <a class="brand" href="index.html#inicio" aria-label="Início"><img src="assets/brand/logo-white.svg" alt="Vinicius Brabo" /></a>
+      <a class="brand" href="index.html#inicio" aria-label="Início"><img src="assets/brand/logo-white.svg" alt="Vinicius Brabo" width="118" height="36" decoding="async" /></a>
       <nav aria-label="Navegação principal">
         <a href="index.html#atuacao">Atuação</a>
         <a href="index.html#automacao">Automação</a>
@@ -104,28 +116,28 @@
       </section>
 
       <section class="project-grid all-projects-grid">
-        <a href="projeto-eternit.html" class="project-card project-card-wide" data-category="branding" aria-label="Ver projeto Eternit">
+        <a href="projeto-eternit.html" class="project-card project-card-wide" data-category="branding">
           <img src="assets/bee/eternit/hero.jpg" alt="Fachada da fábrica da Eternit com nova identidade visual" loading="lazy" />
           <div>
             <span>IDENTIDADE VISUAL · BEE CREATIVE · 2026 ↗</span>
             <h3>Eternit</h3>
           </div>
         </a>
-        <a href="projeto-fisa-concepta.html" class="project-card" data-category="evento" aria-label="Ver projeto FiSA 2026 · Concepta Ingredients">
+        <a href="projeto-fisa-concepta.html" class="project-card" data-category="evento">
           <img src="assets/bee/fisa-concepta/hero.jpg" alt="Estande da Concepta Ingredients na FiSA 2026" loading="lazy" />
           <div>
             <span>EVENTO · BEE CREATIVE · 2026 ↗</span>
             <h3>FiSA 2026 · Concepta Ingredients</h3>
           </div>
         </a>
-        <a href="projeto-workshop-inconcepta.html" class="project-card project-card-wide" data-category="evento" aria-label="Ver projeto Workshop INCONCEPTA">
+        <a href="projeto-workshop-inconcepta.html" class="project-card project-card-wide" data-category="evento">
           <img src="assets/bee/workshop-inconcepta/hero.jpg" alt="Identidade visual do workshop INCONCEPTA 2026" loading="lazy" />
           <div>
             <span>NAMING &amp; IDENTIDADE · BEE CREATIVE · 2026 ↗</span>
             <h3>Workshop INCONCEPTA</h3>
           </div>
         </a>
-        <a href="projeto-ayme.html" class="project-card project-card-wide" data-category="branding" aria-label="Ver projeto Aymê Design">
+        <a href="projeto-ayme.html" class="project-card project-card-wide" data-category="branding">
           <img src="assets/wix/d2a74a_794bdeaed2734d61a64a428ba99771d8.jpg" alt="Identidade visual Aymê Design" loading="lazy" />
           <div>
             <span>IDENTIDADE VISUAL · 2025 ↗</span>
@@ -159,30 +171,14 @@
     </footer>
 
     <a href="https://web.whatsapp.com/send?phone=5519997240129" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contato via WhatsApp">
-      <img src="assets/brand/whatsapp.png" alt="Falar com Vinicius Brabo no WhatsApp" width="60" height="60" />
+      <img src="assets/brand/whatsapp.png" alt="Falar com Vinicius Brabo no WhatsApp" width="60" height="60" loading="lazy" decoding="async" />
     </a>
 
-    <script src="projects-data.js?v=8"></script>
+    <script src="projects-data.js?v=9" defer></script>
+    <script src="i18n.js?v=9" defer></script>
     <script>
-      (function() {
-        const grid = document.querySelector('.all-projects-grid');
+      document.addEventListener('DOMContentLoaded', function() {
         const buttons = document.querySelectorAll('.filter-tab');
-
-        if (grid && typeof getProjectsSortedByDate === 'function') {
-          const sortedProjects = getProjectsSortedByDate();
-          if (sortedProjects && sortedProjects.length > 0) {
-            grid.innerHTML = sortedProjects.map(proj => `
-              <a href="${proj.url}" class="project-card ${proj.wide ? 'project-card-wide' : ''}" data-category="${proj.categoryType}" aria-label="Ver projeto ${proj.title}">
-                <img src="${proj.image}" alt="${proj.alt}" loading="lazy" />
-                <div>
-                  <span>${proj.category} · ${proj.dateDisplay} ↗</span>
-                  <h3>${proj.title}</h3>
-                </div>
-              </a>
-            `).join('');
-          }
-        }
-
         buttons.forEach(btn => {
           btn.addEventListener('click', () => {
             buttons.forEach(b => {
@@ -203,8 +199,7 @@
             });
           });
         });
-      })();
+      });
     </script>
-    <script src="i18n.js?v=8"></script>
   </body>
 </html>

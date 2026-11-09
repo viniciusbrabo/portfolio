@@ -18,6 +18,9 @@ const PROJECTS_DATA = [
     dateDisplay: "2026",
     url: "projeto-eternit.html",
     image: "assets/bee/eternit/hero.jpg",
+    srcset: "assets/bee/eternit/hero-640w.webp 640w, assets/bee/eternit/hero-1200w.webp 1024w",
+    width: 1024,
+    height: 576,
     alt: "Fachada da fábrica da Eternit",
     altEn: "Eternit factory facade with new visual identity",
     wide: true
@@ -33,6 +36,9 @@ const PROJECTS_DATA = [
     dateDisplay: "2026",
     url: "projeto-fisa-concepta.html",
     image: "assets/bee/fisa-concepta/hero.jpg",
+    srcset: "assets/bee/fisa-concepta/hero-640w.webp 640w, assets/bee/fisa-concepta/hero-1200w.webp 1200w",
+    width: 1800,
+    height: 1200,
     alt: "Estande da Concepta Ingredients na FiSA 2026",
     altEn: "Concepta Ingredients booth at FiSA 2026",
     wide: false
@@ -48,6 +54,9 @@ const PROJECTS_DATA = [
     dateDisplay: "2026",
     url: "projeto-workshop-inconcepta.html",
     image: "assets/bee/workshop-inconcepta/hero.jpg",
+    srcset: "assets/bee/workshop-inconcepta/hero-640w.webp 640w, assets/bee/workshop-inconcepta/hero-1200w.webp 1200w",
+    width: 1800,
+    height: 1012,
     alt: "Identidade visual do workshop INCONCEPTA 2026",
     altEn: "Visual identity for the INCONCEPTA 2026 workshop",
     wide: true
@@ -63,6 +72,9 @@ const PROJECTS_DATA = [
     dateDisplay: "2025",
     url: "projeto-ayme.html",
     image: "assets/wix/d2a74a_794bdeaed2734d61a64a428ba99771d8.jpg",
+    srcset: "assets/wix/d2a74a_794bdeaed2734d61a64a428ba99771d8-640w.webp 483w",
+    width: 483,
+    height: 483,
     alt: "Identidade visual Aymê Design",
     altEn: "Aymê Design visual identity",
     wide: true
@@ -78,6 +90,9 @@ const PROJECTS_DATA = [
     dateDisplay: "2025",
     url: "projeto-nautilus-viva-a-vida.html",
     image: "assets/bee/nautilus-viva-a-vida/hero.jpg",
+    srcset: "assets/bee/nautilus-viva-a-vida/hero-640w.webp 640w, assets/bee/nautilus-viva-a-vida/hero-1200w.webp 1200w",
+    width: 1800,
+    height: 1012,
     alt: "Campanha Viva a vida na piscina, da Nautilus",
     altEn: "Nautilus 'Live Life by the Pool' brand campaign",
     wide: false
@@ -93,6 +108,9 @@ const PROJECTS_DATA = [
     dateDisplay: "2024",
     url: "projeto-nautilus-social-media.html",
     image: "assets/bee/nautilus-social-media/hero.jpg",
+    srcset: "assets/bee/nautilus-social-media/hero-640w.webp 640w, assets/bee/nautilus-social-media/hero-1200w.webp 1200w",
+    width: 1800,
+    height: 1012,
     alt: "Publicação \"4 motivos para automatizar o tratamento com cloro\" da Nautilus",
     altEn: "Nautilus social media post on automated chlorine treatment",
     wide: true
@@ -108,6 +126,9 @@ const PROJECTS_DATA = [
     dateDisplay: "2024",
     url: "projeto-joao-jorge.html",
     image: "assets/wix/d2a74a_74e0e0756cde41d78d25da20e3c15c32.jpg",
+    srcset: "assets/wix/d2a74a_74e0e0756cde41d78d25da20e3c15c32-640w.webp 640w, assets/wix/d2a74a_74e0e0756cde41d78d25da20e3c15c32-1200w.webp 775w",
+    width: 775,
+    height: 775,
     alt: "Identidade visual João Jorge Fisioterapia",
     altEn: "João Jorge Physical Therapy visual identity",
     wide: false
@@ -123,6 +144,9 @@ const PROJECTS_DATA = [
     dateDisplay: "2024",
     url: "projeto-neria.html",
     image: "assets/bee/neria/hero.jpg",
+    srcset: "assets/bee/neria/hero-640w.webp 640w, assets/bee/neria/hero-1200w.webp 1200w",
+    width: 1800,
+    height: 1012,
     alt: "Neria: marca de energia do Grupo Capitale",
     altEn: "Neria: Grupo Capitale energy brand",
     wide: false
@@ -138,6 +162,9 @@ const PROJECTS_DATA = [
     dateDisplay: "2024",
     url: "projeto-feiticeira.html",
     image: "assets/wix/d2a74a_e42507411746493ab1eb60a8a63dfcfb.jpg",
+    srcset: "assets/wix/d2a74a_e42507411746493ab1eb60a8a63dfcfb-640w.webp 640w, assets/wix/d2a74a_e42507411746493ab1eb60a8a63dfcfb-1200w.webp 1200w",
+    width: 1920,
+    height: 1920,
     alt: "Concept art Feiticeira",
     altEn: "Sorceress concept art and digital compositing",
     wide: false
@@ -153,6 +180,9 @@ const PROJECTS_DATA = [
     dateDisplay: "2024",
     url: "projeto-sword-girl.html",
     image: "assets/wix/d2a74a_e8a76a4d55c14626a9e7791f7fb1776e.jpg",
+    srcset: "assets/wix/d2a74a_e8a76a4d55c14626a9e7791f7fb1776e-640w.webp 640w, assets/wix/d2a76a4d55c14626a9e7791f7fb1776e-1200w.webp 1200w".replace("d2a76a", "d2a74a_e8a76a"),
+    width: 1358,
+    height: 1920,
     alt: "Concept art Sword Girl",
     altEn: "Sword Girl cyberpunk concept art",
     wide: true

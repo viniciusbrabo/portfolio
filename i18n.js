@@ -511,10 +511,11 @@
           const t = lang === "en" && proj.titleEn ? proj.titleEn : proj.title;
           const cat = lang === "en" && proj.categoryEn ? proj.categoryEn : proj.category;
           const alt = lang === "en" && proj.altEn ? proj.altEn : proj.alt;
-          const aria = lang === "en" ? `View project ${t}` : `Ver projeto ${t}`;
+          const srcsetAttr = proj.srcset ? ` srcset="${proj.srcset}" sizes="(max-width: 700px) 92vw, 48vw"` : "";
+          const dimAttr = proj.width && proj.height ? ` width="${proj.width}" height="${proj.height}"` : "";
           return `
-          <a href="${proj.url}" class="project-card ${proj.wide ? "project-card-wide" : ""}" data-date="${proj.date}" aria-label="${aria}">
-            <img src="${proj.image}" alt="${alt}" loading="lazy" />
+          <a href="${proj.url}" class="project-card ${proj.wide ? "project-card-wide" : ""}" data-date="${proj.date}">
+            <img src="${proj.image}"${srcsetAttr}${dimAttr} alt="${alt}" loading="lazy" decoding="async" />
             <div>
               <span>${cat} · ${proj.dateDisplay} ↗</span>
               <h3>${t}</h3>
@@ -535,11 +536,12 @@
           const t = lang === "en" && proj.titleEn ? proj.titleEn : proj.title;
           const cat = lang === "en" && proj.categoryEn ? proj.categoryEn : proj.category;
           const alt = lang === "en" && proj.altEn ? proj.altEn : proj.alt;
-          const aria = lang === "en" ? `View project ${t}` : `Ver projeto ${t}`;
+          const srcsetAttr = proj.srcset ? ` srcset="${proj.srcset}" sizes="(max-width: 700px) 92vw, 48vw"` : "";
+          const dimAttr = proj.width && proj.height ? ` width="${proj.width}" height="${proj.height}"` : "";
           const hidden = activeFilter !== "all" && proj.categoryType !== activeFilter ? 'style="display:none;"' : "";
           return `
-          <a href="${proj.url}" class="project-card ${proj.wide ? "project-card-wide" : ""}" data-category="${proj.categoryType}" aria-label="${aria}" ${hidden}>
-            <img src="${proj.image}" alt="${alt}" loading="lazy" />
+          <a href="${proj.url}" class="project-card ${proj.wide ? "project-card-wide" : ""}" data-category="${proj.categoryType}" ${hidden}>
+            <img src="${proj.image}"${srcsetAttr}${dimAttr} alt="${alt}" loading="lazy" decoding="async" />
             <div>
               <span>${cat} · ${proj.dateDisplay} ↗</span>
               <h3>${t}</h3>
