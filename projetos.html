@@ -101,7 +101,7 @@
     </header>
 
     <main id="conteudo" class="all-projects-page">
-      <section class="all-projects-header">
+      <section class="all-projects-header reveal-on-scroll">
         <p class="section-label">03 / ARQUIVO DE TRABALHOS</p>
         <h1 class="all-projects-title">Todos os Projetos</h1>
         <p class="all-projects-desc">Cases de rebranding, plataformas de marca, campanhas integradas, eventos B2B e direção de arte desenvolvidos na Agência Bee Creative e em projetos autorais.</p>
@@ -115,7 +115,7 @@
         </div>
       </section>
 
-      <section class="project-grid all-projects-grid">
+      <section class="project-grid all-projects-grid reveal-on-scroll">
         <a href="projeto-eternit.html" class="project-card project-card-wide" data-category="branding">
           <img src="assets/bee/eternit/hero.jpg" alt="Fachada da fábrica da Eternit com nova identidade visual" loading="lazy" />
           <div>
@@ -176,6 +176,7 @@
 
     <script src="projects-data.js?v=9" defer></script>
     <script src="i18n.js?v=9" defer></script>
+    <script src="motion.js" defer></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const buttons = document.querySelectorAll('.filter-tab');
