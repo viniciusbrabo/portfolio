@@ -179,3 +179,116 @@ footer { background: var(--ink); color: var(--cream); padding: 34px 4vw 24px; di
   .footer-colophon { grid-template-columns: 1fr; gap: 10px; padding-bottom: 18px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
 }
+
+/* ==========================================================================
+   Lightbox / Zoom Focado para Imagens dos Cases
+   ========================================================================== */
+.media-frame img.lightbox-trigger {
+  cursor: zoom-in;
+  transition: transform .25s ease, filter .2s ease;
+}
+.media-frame img.lightbox-trigger:hover {
+  filter: brightness(1.02);
+}
+.media-frame img.lightbox-trigger:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+body.lightbox-open {
+  overflow: hidden;
+}
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(16, 17, 17, .94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .22s cubic-bezier(.16, 1, .3, 1);
+  padding: 20px;
+}
+.lightbox-overlay:not([hidden]) {
+  pointer-events: auto;
+}
+.lightbox-overlay.lightbox-visible {
+  opacity: 1;
+}
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  background: rgba(242, 242, 239, .08);
+  border: 1px solid rgba(242, 242, 239, .25);
+  border-radius: 50%;
+  color: var(--cream);
+  font: 400 18px/1 "DM Mono", monospace;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease;
+  z-index: 10001;
+}
+.lightbox-close:hover {
+  background: var(--cream);
+  color: var(--ink);
+  border-color: var(--cream);
+  transform: scale(1.08);
+}
+.lightbox-close:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 3px;
+}
+.lightbox-container {
+  max-width: 94vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, .6);
+  transform: scale(.96);
+  transition: transform .22s cubic-bezier(.16, 1, .3, 1);
+  user-select: none;
+  display: block;
+}
+.lightbox-overlay.lightbox-visible .lightbox-img {
+  transform: scale(1);
+}
+.lightbox-caption {
+  margin: 14px 0 0;
+  font: 500 11px/1.4 "DM Mono", monospace;
+  color: rgba(242, 242, 239, .72);
+  text-align: center;
+  max-width: 800px;
+  letter-spacing: .04em;
+  user-select: none;
+}
+
+@media (max-width: 700px) {
+  .lightbox-close {
+    top: 16px;
+    right: 16px;
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+  .lightbox-img {
+    max-height: 78vh;
+  }
+}
