@@ -205,6 +205,57 @@
   }
 
   /* ==========================================================================
+     6. Barra de Progresso de Leitura
+     ========================================================================== */
+  function initScrollProgressBar() {
+    let bar = document.querySelector('.scroll-progress-bar');
+    if (!bar) {
+      bar = document.createElement('div');
+      bar.className = 'scroll-progress-bar';
+      bar.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(bar);
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+          const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+          bar.style.width = progress + "%";
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  /* ==========================================================================
+     7. Instant Click / Prefetch Inteligente
+     ========================================================================== */
+  function initInstantPrefetch() {
+    const prefetched = new Set();
+    const prefetchUrl = (url) => {
+      if (!url || prefetched.has(url)) return;
+      prefetched.add(url);
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = url;
+      document.head.appendChild(link);
+    };
+
+    document.querySelectorAll('a[href]').forEach((a) => {
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+      if (href.endsWith('.html') || href.includes('projeto-') || href === 'projetos.html') {
+        a.addEventListener('pointerenter', () => prefetchUrl(href), { once: true, passive: true });
+        a.addEventListener('touchstart', () => prefetchUrl(href), { once: true, passive: true });
+      }
+    });
+  }
+
+  /* ==========================================================================
      Inicialização
      ========================================================================== */
   function init() {
@@ -213,6 +264,8 @@
     initToolbeltMarquee();
     initParallax();
     initCustomCursor();
+    initScrollProgressBar();
+    initInstantPrefetch();
   }
 
   if (document.readyState === "loading") {
